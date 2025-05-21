@@ -1,3 +1,5 @@
-* * * * * curl https://raw.githubusercontent.com/DO-Solutions/app-platform-cron/refs/heads/main/poem.json >/proc/1/fd/1 2>/proc/1/fd/2
-
-# An empty line is required at the end of this file for a valid cron file.
+0,30  * * * * curl -X POST "$WEB_APP_URL?group=3" -H "Authorization: Bearer $BEARER_TOKEN"
+6,36  * * * * curl -X POST "$WEB_APP_URL?group=4" -H "Authorization: Bearer $BEARER_TOKEN"
+12,42 * * * * curl -X POST "$WEB_APP_URL?group=0" -H "Authorization: Bearer $BEARER_TOKEN"
+18,48 * * * * curl -X POST "$WEB_APP_URL?group=1" -H "Authorization: Bearer $BEARER_TOKEN"
+24,54 * * * * curl -X POST "$WEB_APP_URL?group=2" -H "Authorization: Bearer $BEARER_TOKEN"
